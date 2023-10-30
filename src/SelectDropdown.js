@@ -23,6 +23,7 @@ const SelectDropdown = (
     defaultValueByIndex /* integer */,
     disabled /* boolean */,
     disableAutoScroll /* boolean */,
+    disableAutoScrollAnimation /* boolean */,
     disabledIndexs /* array of disabled Row index */,
     onFocus /* function  */,
     onBlur /* function  */,
@@ -112,7 +113,7 @@ const SelectDropdown = (
     if (selectedIndex >= 3 && dropDownFlatlistRef) {
       dropDownFlatlistRef.current.scrollToOffset({
         offset: rowStyle && rowStyle.height ? rowStyle.height * selectedIndex : 50 * selectedIndex,
-        animated: true,
+        animated: !(!!disableAutoScrollAnimation),
       });
     }
   };

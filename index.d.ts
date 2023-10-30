@@ -32,6 +32,10 @@ declare module 'react-native-lucy-select-dropdown' {
      */
     disableAutoScroll?: boolean;
     /**
+     * disable auto scroll animation
+     */
+    disableAutoScrollAnimation?: boolean;
+    /**
      * disable click all Rows index in the list
      */
     disabledIndexs?: number[];
