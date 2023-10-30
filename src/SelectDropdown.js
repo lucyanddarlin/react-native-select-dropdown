@@ -21,6 +21,7 @@ const SelectDropdown = (
     rowTextForSelection /* function */,
     defaultValue /* any */,
     defaultValueByIndex /* integer */,
+    modalAnimationType /* string */, 
     disabled /* boolean */,
     disableAutoScroll /* boolean */,
     disableAutoScrollAnimation /* boolean */,
@@ -172,7 +173,7 @@ const SelectDropdown = (
   const renderDropdown = () => {
     return (
       isVisible && (
-        <DropdownModal statusBarTranslucent={statusBarTranslucent} visible={isVisible} onRequestClose={onRequestClose}>
+        <DropdownModal statusBarTranslucent={statusBarTranslucent} visible={isVisible} modalAnimationType={modalAnimationType} onRequestClose={onRequestClose}>
           <DropdownOverlay onPress={closeDropdown} backgroundColor={dropdownOverlayColor} />
           <DropdownWindow layoutStyle={dropdownWindowStyle}>
             <FlatList

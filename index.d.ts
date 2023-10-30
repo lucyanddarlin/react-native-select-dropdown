@@ -24,6 +24,10 @@ declare module 'react-native-lucy-select-dropdown' {
      */
     defaultValueByIndex?: number;
     /**
+     * modal animation type
+     */
+    modalAnimationType?: 'none' | 'slide' | 'fade' | undefined;
+    /**
      * disable dropdown
      */
     disabled?: boolean;
